@@ -1,0 +1,54 @@
+{
+  "name": "@mopsite/svg-icon",
+  "version": "1.0.0",
+  "description": "A Vue component for svg icon.",
+  "type": "module",
+  "main": "./dist/svg-icon",
+  "browser": "./dist/svg-icon.umd.js",
+  "module": "./dist/svg-icon.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/svg-icon.es.js",
+      "require": "./dist/svg-icon.umd.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "LICENCE"
+  ],
+  "keywords": [
+    "vite",
+    "svg",
+    "icon"
+  ],
+  "author": {
+    "name": "Paul",
+    "email": "37662788@qq.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mopsite/svg-icon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mopsite/svg-icon.git/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.8",
+    "vite-plugin-css-injected-by-js": "^3.5.1"
+  }
+}
