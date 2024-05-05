@@ -1,4 +1,4 @@
-import SvgIcon from './svgIcon/index.vue'
+import SvgIcon from './index.vue'
 
 const install = app => app.component(SvgIcon.name, SvgIcon)
 

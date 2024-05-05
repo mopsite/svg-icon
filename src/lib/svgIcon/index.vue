@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import axios from 'axios'
 
 defineOptions({
@@ -37,15 +37,22 @@ const props = defineProps({
 
 const iconRaw = ref('')
 
-if (/^https?:/.test(props.url)) {
-  axios
-    .get(`${props.url}${props.name}.svg`)
-    .then(res => (iconRaw.value = res.data))
-} else {
-  import(/* @vite-ignore */ `${props.url}${props.name}.svg`).then(
-    res => (iconRaw.value = res.default)
-  )
-}
+watchEffect(
+  () => {
+    if (/^https?:/.test(props.url)) {
+      axios
+        .get(`${props.url}${props.name}.svg`)
+        .then(res => (iconRaw.value = res.data))
+    } else {
+      import(/* @vite-ignore */ `${props.url}${props.name}.svg?raw`).then(
+        res => (iconRaw.value = res.default)
+      )
+    }
+  },
+  {
+    immediatly: true
+  }
+)
 </script>
 
 <template>

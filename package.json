@@ -1,6 +1,6 @@
 {
   "name": "@mopsite/svg-icon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue component for svg icon.",
   "type": "module",
   "main": "./dist/svg-icon",
@@ -49,6 +49,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^5.2.8",
-    "vite-plugin-css-injected-by-js": "^3.5.1"
+    "vite-plugin-css-injected-by-js": "^3.5.1",
+    "vite-svg-loader": "^5.1.0"
   }
 }
