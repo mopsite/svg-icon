@@ -40,6 +40,14 @@
       size="3em"
       :opacity="{ primary: 0.6, secondary: 0.2 }"
     />
+
+    <h2>7. Props - block</h2>
+    <h3>block: true</h3>
+    <SvgIcon name="solid/bus" />
+    <SvgIcon name="solid/bus" />
+    <SvgIcon name="solid/bus" size="3em" block />
+    <SvgIcon name="solid/bus" />
+    <SvgIcon name="solid/bus" />
   </div>
 </template>
 

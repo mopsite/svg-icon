@@ -32,10 +32,15 @@ const props = defineProps({
       primary: 1,
       secondary: 0.4
     })
+  },
+  block: {
+    type: Boolean,
+    default: false
   }
 })
 
 const iconRaw = ref('')
+const block = ref('')
 
 watchEffect(
   () => {
@@ -47,6 +52,12 @@ watchEffect(
       import(/* @vite-ignore */ `${props.url}${props.name}.svg?raw`).then(
         res => (iconRaw.value = res.default)
       )
+    }
+
+    if (props.block) {
+      block.value = 'block'
+    } else {
+      block.value = 'inline'
     }
   },
   {
@@ -61,6 +72,7 @@ watchEffect(
 
 <style scoped>
 :deep(svg) {
+  display: v-bind('block');
   width: v-bind('props.size');
   height: v-bind('props.size');
   fill: v-bind('props.color');

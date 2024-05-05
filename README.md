@@ -103,3 +103,7 @@ createApp(App).use(svgIcon).mount('#app')
 - opacity
 
   `opacity` 属性可以是 0~1 的数字，也可以是对象。该属性用于设置 svg 图像的透明度，其用法与 `color` 属性基本一致。
+
+- display
+
+  `display` 属性为布尔值，默认 false。该属性用于设置 svg 图像的 `display` 属性，当为 false 时，`dispaly: inline;`，为 true 时，`dispaly: block;`。
